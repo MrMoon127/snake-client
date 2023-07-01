@@ -1,11 +1,11 @@
-const { MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MESSAGES } = require("./constants")
+const { MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MESSAGES } = require("./constants");
 
 let connection;
-
 
 const setupInput = function (conn) {
   connection = conn;
   const stdin = process.stdin;
+
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
@@ -42,7 +42,7 @@ const handleUserInput = function(key) {
 
   if (MESSAGES[key]) {
     connection.write(`Say: ${MESSAGES[key]}`);
-  }
+  };
 
 };
 
