@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-![Alt text](image.png)
+![Gameplay image](./images/image.png)
 !["screenshot description"](#)
 
 
