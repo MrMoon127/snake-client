@@ -1,3 +1,5 @@
+const { MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, MESSAGES } = require("./constants")
+
 let connection;
 
 
@@ -23,33 +25,24 @@ const handleUserInput = function(key) {
 
   // movement options below
 
-  if (key === 'w') {
+  if (key === MOVE_UP_KEY) {
     connection.write("Move: up");
   };
-  if (key === 'a') {
+  if (key === MOVE_LEFT_KEY) {
     connection.write("Move: left");
   };
-  if (key === 's') {
+  if (key === MOVE_DOWN_KEY) {
     connection.write("Move: down");
   };
-  if (key === 'd') {
+  if (key === MOVE_RIGHT_KEY) {
     connection.write("Move: right");
   };
 
   // messages below
 
-  if (key === 'i') {
-    connection.write("Say: I'm going to win!")
+  if (MESSAGES[key]) {
+    connection.write(`Say: ${MESSAGES[key]}`);
   }
-  if (key === 'j') {
-    connection.write("Say: Get Dunked On!");
-  };
-  if (key === 'k') {
-    connection.write("Say: Almost Got Me");
-  };
-  if (key === 'l') {
-    connection.write("Say: Got To Go Now");
-  };
 
 };
 
