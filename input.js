@@ -36,6 +36,21 @@ const handleUserInput = function(key) {
     connection.write("Move: right");
   };
 
+  // messages below
+
+  if (key === 'i') {
+    connection.write("Say: I'm going to win!")
+  }
+  if (key === 'j') {
+    connection.write("Say: Get Dunked On!");
+  };
+  if (key === 'k') {
+    connection.write("Say: Almost Got Me");
+  };
+  if (key === 'l') {
+    connection.write("Say: Got To Go Now");
+  };
+
 };
 
 module.exports = {
